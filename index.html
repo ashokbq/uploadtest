@@ -1,29 +1,33 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!DOCTYPE html>
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-
-				
-<link href="css/uploadify.css" type="text/css" rel="stylesheet" />
-<script type="text/javascript" src="js/jquery-1.4.2.min.js"></script>
-<script type="text/javascript" src="js/swfobject.js"></script>
-<script type="text/javascript" src="js/jquery.uploadify.v2.1.4.min.js"></script>
-
-
+<title>Test Upload</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="http://code.jquery.com/mobile/1.1.0/jquery.mobile-1.1.0.min.css" />
+<link rel="stylesheet" href="http://code.jquery.com/ui/1.10.2/themes/smoothness/jquery-ui.css" />
+<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+<script src="http://code.jquery.com/ui/1.10.2/jquery-ui.js"></script>
+<script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+<script src="http://code.jquery.com/mobile/1.1.0/jquery.mobile-1.1.0.min.js"></script></head>
 <script type="text/javascript">
-$(document).ready(function() {
-  $('#file_upload').uploadify({
-    'uploader'  : 'js/uploadify.swf',
-    'script'    : 'upload.php',
-    'cancelImg' : 'js/cancel.png',
-    'folder'    : 'uploads',
-    'auto'      : true
-  });
+$(function(){
+$('#upload').live("click",function()
+{
+	  window.location = 'testupload.html'
+});
 });
 </script>
-
-</head>
 <body>
-<input id="file_upload" name="file_upload" type="file" />
+<div id="page1" data-role="page">
+  <div data-role="header">
+    <h1>Sample file uploader</h1>
+  </div>
+  <div data-role="content"> 
+  <img src="images.jpg" alt="Breast Cancer Awareness" />
+            <input type="button" value="Upload Image" id="upload"/>
+
+  </div>
+</div>
+</div>
 </body>
 </html>

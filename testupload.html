@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+			
+<link href="css/uploadify.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="js/jquery-1.4.2.min.js"></script>
+<script type="text/javascript" src="js/swfobject.js"></script>
+<script type="text/javascript" src="js/jquery.uploadify.v2.1.4.min.js"></script>
+
+
+<script type="text/javascript">
+$(document).ready(function() {
+  $('#file_upload').uploadify({
+    'uploader'  : 'js/uploadify.swf',
+    'cancelImg' : 'js/cancel.png',
+    'folder'    : 'uploads',
+    'auto'      : true
+  });
+});
+</script>
+
+</head>
+<body>
+<input id="file_upload" name="file_upload" type="file" />
+</body>
+</html>
